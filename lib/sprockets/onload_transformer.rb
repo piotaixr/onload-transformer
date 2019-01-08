@@ -7,7 +7,7 @@ module Sprockets
       body = input[:data]
       util_function_name = "onloadTransformerUtil#{to_function_key(asset_name)}"
       wrapped_in_event = <<-JS
-        function #{util_function_name}() {
+        #{util_function_name} = () => {
           #{body}
         };
 
